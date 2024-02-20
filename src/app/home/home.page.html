@@ -1,20 +1,107 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+<ion-header>
+  <div class="toolbar">
+    <div class="actionsMenu">
+      <ion-grid [fixed]="true">
+        <ion-row>
+          <ion-col>
+            <ion-buttons>
+              <ion-menu-button menu="main-menu" class="menu"></ion-menu-button>
+            </ion-buttons>
+          </ion-col>
+          <ion-col>
+            <div class="logoHome">
+              <img class="logo" src="./assets/images/logoHome.png" alt="Logo">
+            </div>
+          </ion-col>
+          <ion-col>
+            <div class="notificationAlert">
+              <ion-icon class="notification" name="notifications"></ion-icon>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-grid>
+          <ion-row class="ion-align-items-center">
+            <ion-col class="profileImage"> 
+              <img class="userPhotoProfile" src="./assets/images/userPhoto.jpeg" alt="Logo">
+            </ion-col>
+            <ion-col class="profileName" size="8">
+              <ion-label class="user">Leonardo Santos</ion-label><br />
+              <ion-label class="plane">Nível Roxo</ion-label>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <ion-grid [fixed]="true">
+          <ion-row class="profileButtons ion-justify-content-center">
+            <ion-col size="auto" class="profileCol">
+              <ion-icon name="body-outline" class="buttonDescription"></ion-icon>
+               <ion-label class="textBtnCustom">MEU CORPO</ion-label> 
+              <ion-icon name="trophy-outline" class="buttonDescription"></ion-icon>
+               <ion-label class="textBtnCustom">OBJETIVOS E CONQUISTAS</ion-label> 
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-grid>
+    </div>
+  </div>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<ion-content>
+  <div class="homePrograms">
+    <div class="swiper">
+      <ion-label class="programTitle">
+        PERSONAL ONLINE
+      </ion-label>
+      <ion-icon name="add-circle-outline" class="notification"></ion-icon>
+      <swiper-container>
+        <swiper-slide>
+          <img class="logo" src="./assets/images/treinoPeso.png" alt="Logo">
+        </swiper-slide>
+        <swiper-slide>
+          <img class="logo" src="./assets/images/yoga.png" alt="Logo">
+        </swiper-slide>
+        <swiper-slide>
+          <img class="logo" src="./assets/images/academia.png" alt="Logo">
+        </swiper-slide>
+      </swiper-container>
+    </div>
+    <div>
+      <ion-label class="programTitle">
+        PROGRAMAS
+      </ion-label>
+      <ion-badge color="warning">Novo</ion-badge>
+      <swiper-container>
+        <swiper-slide>
+          <img class="logo" src="./assets/images/treinoPeso.png" alt="Logo">
+        </swiper-slide>
+        <swiper-slide>
+          <img class="logo" src="./assets/images/yoga.png" alt="Logo">
+        </swiper-slide>
+        <swiper-slide>
+          <img class="logo" src="./assets/images/academia.png" alt="Logo">
+        </swiper-slide>
+      </swiper-container>
+    </div>
+    <div>
+      <ion-label class="programTitle">
+        CONTEÚDOS
+      </ion-label>
+      <swiper-container>
+        <swiper-slide>
+          <div class="rectangle"></div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="rectangle"></div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="rectangle"></div>
+        </swiper-slide>
+      </swiper-container>
+    </div>
   </div>
 </ion-content>
+
+<ion-buttons slot="center">
+  <ion-button (click)="logout()"></ion-button>
+  <ion-icon class="logoutButton" slot="icon-only" name="log-out">
+  </ion-icon>Sair
+</ion-buttons>

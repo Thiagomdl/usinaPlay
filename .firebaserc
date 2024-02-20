@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "usinaplay-46f32": {
+      "hosting": {
+        "app": [
+          "usinaplay"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "usinaplay-46f32"
+  }
+}
